@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'django_filters',
     'users',
     'products',
     'cart',
@@ -68,7 +69,7 @@ REST_FRAMEWORK={
     ),
     'DEFAULT_PERMISSION_CLASSES':
     (
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ),
 }
 
