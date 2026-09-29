@@ -39,7 +39,8 @@ class PlaceOrderView(APIView):
         return Response({
             "message": "Order placed successfully",
             "order_id": order.id
-        })class MyOrdersView(APIView):
+        })
+class MyOrdersView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
